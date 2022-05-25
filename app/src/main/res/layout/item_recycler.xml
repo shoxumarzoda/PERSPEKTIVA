@@ -8,39 +8,34 @@
 
 
     <androidx.cardview.widget.CardView
-        app:cardElevation="10dp"
+        app:cardElevation="5dp"
         android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:weightSum="2"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_weight="1"
                 app:cardElevation="10dp"
                 android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
 
                     android:src="@drawable/ic_launcher_background" />
 
             </androidx.cardview.widget.CardView>
 
-
-
-
             <LinearLayout
-                android:layout_weight="1"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -51,7 +46,6 @@
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/imageView"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:text="Borucher"
@@ -80,15 +74,12 @@
                     android:layout_marginEnd="16dp"
                     android:maxLines="5"
                     android:drawablePadding="10dp"
-                    android:ellipsize="end"
-                    android:id="@+id/desc"
+                     android:id="@+id/desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:ignore="SmallSp" />
 
             </LinearLayout>
-
-
 
         </LinearLayout>
 
