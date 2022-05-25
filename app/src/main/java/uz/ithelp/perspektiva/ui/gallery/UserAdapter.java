@@ -1,4 +1,4 @@
-package uz.ithelp.perspektiva.ui.home;
+package uz.ithelp.perspektiva.ui.gallery;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import uz.ithelp.perspektiva.R;
+import uz.ithelp.perspektiva.ui.home.HomeFragment;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder> implements Filterable {
 
@@ -25,7 +26,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVie
     private Context context;
     private SelectedUser selectedUser;
 
-    public UserAdapter(List<ModelRcycler> userModelList, HomeFragment selectedUser) {
+    public UserAdapter(List<ModelRcycler> userModelList, GalleryFragment selectedUser) {
         this.userModelList = userModelList;
         this.userModelListFilter = userModelList;
         this.selectedUser = selectedUser;

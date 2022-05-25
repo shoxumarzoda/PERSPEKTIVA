@@ -1,17 +1,13 @@
 package uz.ithelp.perspektiva.ui.home;
 
 
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,9 +24,6 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
 
     RecyclerView recyclerView;
     List<ModelRcycler> modelRcyclers = new ArrayList<>();
-    int getChemgeItemPosition;
-
-    ConstraintLayout constraintLayout;
     UserAdapter userAdapter;
 
 
@@ -43,7 +36,7 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
         // ruyhatni eloni va sozlanmasi
         recyclerView = root.findViewById(R.id.recyclerView1);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),0));
+        recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(),0));
 
         initial();
 

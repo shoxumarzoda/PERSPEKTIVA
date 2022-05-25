@@ -4,34 +4,70 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
+import androidx.fragment.app.Fragment;
+
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+import uz.ithelp.perspektiva.R;
 import uz.ithelp.perspektiva.databinding.FragmentGalleryBinding;
 
-public class GalleryFragment extends Fragment {
+
+public class GalleryFragment extends Fragment implements UserAdapter.SelectedUser{
 
     private FragmentGalleryBinding binding;
+    RecyclerView recyclerView;
+    List<ModelRcycler> modelRcyclers = new ArrayList<>();
+    UserAdapter userAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        recyclerView = root.findViewById(R.id.recyclerView2);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(),0));
+
+        initial();
+
+        userAdapter  = new UserAdapter(modelRcyclers, this);
+        recyclerView.setAdapter(userAdapter);
+
+
+
         return root;
+    }
+
+    private void initial() {
+
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    @Override
+    public void selectedUser(ModelRcycler modelRcycler) {
+
     }
 }
