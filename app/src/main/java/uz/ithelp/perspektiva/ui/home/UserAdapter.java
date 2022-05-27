@@ -1,6 +1,8 @@
 package uz.ithelp.perspektiva.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import uz.ithelp.perspektiva.MainActivity2;
+import uz.ithelp.perspektiva.MainActivity3;
 import uz.ithelp.perspektiva.R;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder> implements Filterable {
@@ -110,7 +114,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVie
                 public void onClick(View v) {
                     selectedUser.selectedUser(userModelList.get(getAdapterPosition()));
 
-                    Toast.makeText(v.getContext(), "" + userModelList.get(getAdapterPosition()).getLessonName(), Toast.LENGTH_SHORT).show();
 
                 }
             });

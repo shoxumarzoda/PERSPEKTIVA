@@ -1,6 +1,7 @@
 package uz.ithelp.perspektiva.ui.home;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import uz.ithelp.perspektiva.MainActivity2;
+import uz.ithelp.perspektiva.MainActivity3;
 import uz.ithelp.perspektiva.R;
 import uz.ithelp.perspektiva.databinding.FragmentHomeBinding;
 
@@ -48,7 +51,7 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
     }
 
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"Kirish","Perspektiva fransuzcha so‘z bo‘lib, “la perspective” - uzoqqa qarash, yunonchasiga esa “perspictor” - oyna orqali to‘g‘ri va aniq ko‘rayapman degan ma‘noni bildiradi","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"Kirish","Perspektiva fransuzcha so‘z bo‘lib, “la perspective” - uzoqqa qarash, yunonchasiga esa “perspictor” - oyna orqali to‘g‘ri va aniq ko‘rayapman degan ma‘noni bildiradi",""));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"I BOB.\tPERSPEKTIVA VA UNING TURLARI. PERSPEKTIVANING GEOMETRIK APPARATI","",""));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"II BOB.\tTO’G’RI CHIZIQ VA TEKISLIKNING PERSPEKTIV TASVIRI","",""));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"III BOB.\tPERSPEKTIVADA POZITSION VA METRIK MASALALAR YECHISH","",""));
@@ -71,6 +74,21 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
 
     @Override
     public void selectedUser(ModelRcycler modelRcycler) {
+
+        if (modelRcycler.getLessonName().toLowerCase().startsWith("kirish") ||
+                modelRcycler.getLessonName().toLowerCase().startsWith("pers") ||
+                modelRcycler.getLessonName().toLowerCase().startsWith("adabiyot")
+        ){
+//
+            startActivity(new Intent(getContext(), MainActivity3.class).putExtra("data",modelRcycler.getLoadUrl()));
+        }
+        else {
+
+            startActivity(new Intent(getContext(), MainActivity2.class).putExtra("swimmers",modelRcycler.getLoadUrl()));
+
+        }
+
+
 
     }
 }
