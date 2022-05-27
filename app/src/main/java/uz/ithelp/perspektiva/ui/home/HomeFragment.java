@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
     }
 
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"Kirish","Perspektiva fransuzcha so‘z bo‘lib, “la perspective” - uzoqqa qarash, yunonchasiga esa “perspictor” - oyna orqali to‘g‘ri va aniq ko‘rayapman degan ma‘noni bildiradi",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"Kirish","Perspektiva fransuzcha so‘z bo‘lib, “la perspective” - uzoqqa qarash, yunonchasiga esa “perspictor” - oyna orqali to‘g‘ri va aniq ko‘rayapman degan ma‘noni bildiradi","https://github.com/shoxumarzoda/PERSPEKTIVA/raw/master/app/src/main/assets/kirish.pdf"));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"I BOB.\tPERSPEKTIVA VA UNING TURLARI. PERSPEKTIVANING GEOMETRIK APPARATI","",""));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"II BOB.\tTO’G’RI CHIZIQ VA TEKISLIKNING PERSPEKTIV TASVIRI","",""));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"III BOB.\tPERSPEKTIVADA POZITSION VA METRIK MASALALAR YECHISH","",""));
