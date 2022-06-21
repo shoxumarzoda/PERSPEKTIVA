@@ -51,12 +51,14 @@ public class GalleryFragment extends Fragment implements UserAdapter.SelectedUse
 
     private void initial() {
 
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey sadfsdofj sdfjsdiopjsodijfds ssdfijsdijfds...","file:///android_asset/Kirish.htm"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"1-video. Perspektiv tasvir qurish usullari","Perspektiv tasvir qurish usullari borasida to'liq...",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"2-video. Eng yaxshi ko'rish burchagi","Eng yaxshi ko'rish burchagi mavzusida qiziqarli faktlar...",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"3-video. Perspektiv masshtablar 1-qism","Perspektiv masshtablar bilan ishlash borasida...",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"4-video. Perspektiv masshtablar 2-qism","Perspektiv masshtablar bilan ishlash borasida...",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"5-video. Qopqog'i ochilgan quti perspektivasi","Qopqog'i ochilgan quti perspektivasi ...",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"6-video. Arxitektorlar usuli","Loyihalash amaliyotda o‘zining yasalishi jixatidan soddaligi sababli keng tarqalgan perspektiva...",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"7-video. Radial nurlar izi usuli","Radial nurlar izi usuli ...",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"8-video. To'rlar usuli","Mikrorayon,  xiyobonlar,  sport  komplekslari  va  shu  kabi  katta  maydonlarga  ega  bo'lgan  inshootlarning  perspektivasini  yasashda  to 'r  usuli  eng  qulay  usul hisoblanadi...",""));
 
     }
 
