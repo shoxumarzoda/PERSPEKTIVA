@@ -25,7 +25,7 @@ import uz.ithelp.perspektiva.databinding.FragmentGalleryBinding;
 public class GalleryFragment extends Fragment implements UserAdapter.SelectedUser{
 
     private FragmentGalleryBinding binding;
-    RecyclerView recyclerView;
+    RecyclerView recyclerView2;
     List<ModelRcycler> modelRcyclers = new ArrayList<>();
     UserAdapter userAdapter;
 
@@ -35,14 +35,14 @@ public class GalleryFragment extends Fragment implements UserAdapter.SelectedUse
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        recyclerView = root.findViewById(R.id.recyclerView2);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(),0));
+        recyclerView2 = root.findViewById(R.id.recyclerView2);
+        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView2.addItemDecoration(new DividerItemDecoration(requireContext(),0));
 
         initial();
 
         userAdapter  = new UserAdapter(modelRcyclers, this);
-        recyclerView.setAdapter(userAdapter);
+        recyclerView2.setAdapter(userAdapter);
 
 
 
@@ -51,7 +51,7 @@ public class GalleryFragment extends Fragment implements UserAdapter.SelectedUse
 
     private void initial() {
 
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey sadfsdofj sdfjsdiopjsodijfds ssdfijsdijfds...","file:///android_asset/Kirish.htm"));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
         modelRcyclers.add(new ModelRcycler(R.drawable.author,"SALOM","Maktab o`quvchilarining, kollej va litsey ...","file:///android_asset/Kirish.htm"));
