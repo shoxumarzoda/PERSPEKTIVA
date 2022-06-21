@@ -13,8 +13,8 @@
         <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/author" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/auuuu" />
 
         <TextView
             android:id="@+id/userNAme"
