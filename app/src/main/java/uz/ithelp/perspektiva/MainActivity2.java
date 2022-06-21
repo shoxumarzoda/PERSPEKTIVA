@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,8 +32,11 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapterAC2.S
 
     int getChemgeItemPosition;
 
+
     ConstraintLayout constraintLayout;
     UserAdapterAC2 userAdapter;
+    ImageView imageViewc2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapterAC2.S
 
 
         Intent intent = getIntent();
+        imageViewc2 = findViewById(R.id.imageViewac2);
 
         // ruyhatni eloni va sozlanmasi
         recyclerView = findViewById(R.id.recyclerView1);
@@ -52,8 +57,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapterAC2.S
         // tool bar sozlanmasi
 //        toolbar = findViewById(R.id.toolBAr);
 //        this.setSupportActionBar(toolbar);
-//        this.getSupportActionBar().setTitle("");
-
+        this.getSupportActionBar().setTitle("");
         // tanlangan chapter nomini activity2 da sarlavhaga yozish
         textViewSelectedChapterName = findViewById(R.id.textViewSelectedChapterName);
         getChemgeItemPosition = intent.getIntExtra("swimmers",1);
@@ -62,6 +66,7 @@ public class MainActivity2 extends AppCompatActivity implements UserAdapterAC2.S
         //backround uchun liner layoutni aniqlash
         constraintLayout = findViewById(R.id.constraintLayout1);
         constraintLayout.setBackgroundColor(getResources().getColor(R.color.mycolor));
+
 
         switch (getChemgeItemPosition){
             case 1: {

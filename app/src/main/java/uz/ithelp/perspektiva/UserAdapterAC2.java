@@ -98,7 +98,7 @@ class UserAdapterAC2 extends RecyclerView.Adapter<UserAdapterAC2.UserAdapterView
             super(itemView);
 
             tvUserNAme = itemView.findViewById(R.id.userNAme);
-            imIcon = itemView.findViewById(R.id.imageView);
+            imIcon = itemView.findViewById(R.id.imageViewac2);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

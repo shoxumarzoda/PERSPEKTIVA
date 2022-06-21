@@ -48,6 +48,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVie
 
         holder.tvUserNAme.setText(modelRcycler.getLessonName());
         holder.tvtextName.setText(modelRcycler.getTextName());
+        holder.imIcon.setImageResource(modelRcycler.getImgID());
 
     }
 

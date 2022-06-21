@@ -51,17 +51,17 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
     }
 
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"Kirish","Perspektiva fransuzcha so‘z bo‘lib, “la perspective” - uzoqqa qarash, yunonchasiga esa “perspictor” - oyna orqali to‘g‘ri va aniq ko‘rayapman degan ma‘noni bildiradi","https://github.com/shoxumarzoda/PERSPEKTIVA/raw/master/app/src/main/assets/kirish.pdf"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"I BOB.\tPERSPEKTIVA VA UNING TURLARI. PERSPEKTIVANING GEOMETRIK APPARATI","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"II BOB.\tTO’G’RI CHIZIQ VA TEKISLIKNING PERSPEKTIV TASVIRI","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"III BOB.\tPERSPEKTIVADA POZITSION VA METRIK MASALALAR YECHISH","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"IV BOB.\tPERSPEKTIV TASVIR QURISH USULLARI","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"V BOB.\tMARKAZIY PROYEKSIYALASHDA SOYALAR YASASH NAZARIYASI","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"VI BOB.\tAKS TASVIRLARNING PERSPEKTIVASI","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"VII BOB.\tGRAFIK ISH TOPSHIRIQLARINI BAJARISHGA OID METODIK TAVSIYALAR","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"PERSPEKTIVA ATAMALARI VA TUSHUNCHALARI BO‘YICHA YIG‘MA LUG‘AT","",""));
-        modelRcyclers.add(new ModelRcycler(R.drawable.author,"ADABIYOTLAR","1. Murodov Sh.K. va boshqalar “Chizma geometriya”.-Т.: “Iqtisod-moliya”. 2006-y.\n" +
-                "2. Qulnazarov B.B. “Chizma geometriya”.-T.: “O’zbekistan”. 2006-y.\n",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.lgo,"Kirish","Perspektiva fransuzcha so‘z bo‘lib, “la perspective” - uzoqqa qarash, yunonchasiga esa “perspictor” - oyna orqali to‘g‘ri va aniq ko‘rayapman degan ma‘noni bildiradi","https://github.com/shoxumarzoda/PERSPEKTIVA/raw/master/app/src/main/assets/kirish.pdf"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ikki,"I BOB.\tPERSPEKTIVA VA UNING TURLARI. PERSPEKTIVANING GEOMETRIK APPARATI","",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.uch,"II BOB.\tTO’G’RI CHIZIQ VA TEKISLIKNING PERSPEKTIV TASVIRI","",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.turt,"III BOB.\tPERSPEKTIVADA POZITSION VA METRIK MASALALAR YECHISH","",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.besh,"IV BOB.\tPERSPEKTIV TASVIR QURISH USULLARI","",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.olt,"V BOB.\tMARKAZIY PROYEKSIYALASHDA SOYALAR YASASH NAZARIYASI","",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.yet,"VI BOB.\tAKS TASVIRLARNING PERSPEKTIVASI","",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.sak,"VII BOB.\tGRAFIK ISH TOPSHIRIQLARINI BAJARISHGA OID METODIK TAVSIYALAR","",""));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ki,"PERSPEKTIVA ATAMALARI VA TUSHUNCHALARI BO‘YICHA YIG‘MA LUG‘AT","","https://github.com/shoxumarzoda/PERSPEKTIVA/raw/master/app/src/main/assets/izohli.pdf"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.tuqq,"ADABIYOTLAR","1. Murodov Sh.K. va boshqalar “Chizma geometriya”.-Т.: “Iqtisod-moliya”. 2006-y.\n" +
+                "2. Qulnazarov B.B. “Chizma geometriya”.-T.: “O’zbekistan”. 2006-y.\n","https://github.com/shoxumarzoda/PERSPEKTIVA/raw/master/app/src/main/assets/adabiyot.pdf"));
 
 
     }
@@ -89,7 +89,18 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
 
         }
 
+    }
 
+//    @Override
+//    public void onPause() {
+//        super.onPause();
+//        modelRcyclers.clear();
+//    }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        modelRcyclers.clear();
+        initial();
     }
 }
