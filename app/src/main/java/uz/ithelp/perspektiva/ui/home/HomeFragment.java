@@ -84,7 +84,8 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
         }
         else {
 
-            startActivity(new Intent(getContext(), MainActivity2.class).putExtra("swimmers",modelRcycler.getLoadUrl()));
+          startActivity(new Intent(getContext(), MainActivity2.class).putExtra("swimmers",modelRcyclers.indexOf(modelRcycler)));
+
 
         }
 

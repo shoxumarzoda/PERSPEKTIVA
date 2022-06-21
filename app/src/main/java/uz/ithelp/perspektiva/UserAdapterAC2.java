@@ -1,8 +1,6 @@
-package uz.ithelp.perspektiva.ui.home;
+package uz.ithelp.perspektiva;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,18 +16,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import uz.ithelp.perspektiva.MainActivity2;
-import uz.ithelp.perspektiva.MainActivity3;
-import uz.ithelp.perspektiva.R;
-
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder> implements Filterable {
+class UserAdapterAC2 extends RecyclerView.Adapter<UserAdapterAC2.UserAdapterViewHolder> implements Filterable {
 
     private List<ModelRcycler> userModelList;
     private List<ModelRcycler> userModelListFilter;
     private Context context;
     private SelectedUser selectedUser;
 
-    public UserAdapter(List<ModelRcycler> userModelList, HomeFragment selectedUser) {
+    public UserAdapterAC2(List<ModelRcycler> userModelList, MainActivity2 selectedUser) {
         this.userModelList = userModelList;
         this.userModelListFilter = userModelList;
         this.selectedUser = selectedUser;
@@ -39,15 +33,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVie
     @Override
     public UserAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
-        return new UserAdapterViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recycler,null));
+        return new UserAdapterViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recycler1,null));
     }
 
     @Override
     public void onBindViewHolder(@NonNull UserAdapterViewHolder holder, int position) {
         ModelRcycler modelRcycler = userModelList.get(position);
-
-        holder.tvUserNAme.setText(modelRcycler.getLessonName());
-        holder.tvtextName.setText(modelRcycler.getTextName());
+        String userName = modelRcycler.getLessonName();
+        holder.tvUserNAme.setText(userName);
 
     }
 
@@ -97,24 +90,22 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVie
 
     public class UserAdapterViewHolder extends RecyclerView.ViewHolder {
 
+        TextView tvPerfix;
         TextView tvUserNAme;
-        TextView tvtextName ;
         ImageView imIcon;
 
         public UserAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tvUserNAme = itemView.findViewById(R.id.title);
-            tvtextName = itemView.findViewById(R.id.desc);
+            tvUserNAme = itemView.findViewById(R.id.userNAme);
             imIcon = itemView.findViewById(R.id.imageView);
-
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     selectedUser.selectedUser(userModelList.get(getAdapterPosition()));
 
-
+                    Toast.makeText(v.getContext(), "" + userModelList.get(getAdapterPosition()).getLessonName(), Toast.LENGTH_SHORT).show();
 
                 }
             });

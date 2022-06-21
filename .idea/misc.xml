@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/drawable-v24/ic_baseline_arrow_forward_ios_24.xml" value="0.346" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/drawable-v24/recycleview_bg.xml" value="0.114" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
@@ -13,7 +14,11 @@
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/layout/fragment_slideshow.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/layout/item_recycler.xml" value="0.33" />
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/layout/item_recycler1.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/perspektiva/app/src/main/res/menu/menu1.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
