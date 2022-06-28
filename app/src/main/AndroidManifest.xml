@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="uz.ithelp.perspektiva" >
+    package="uz.ithelp.perspektiva">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Perspektiva"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
@@ -26,7 +29,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Perspektiva.NoActionBar" >
+            android:theme="@style/Theme.Perspektiva.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
