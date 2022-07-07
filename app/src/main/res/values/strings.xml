@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">perspektiva</string>
+    <string name="app_name">PERSPEKTIVA</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -15,4 +15,5 @@
     <string name="xumoyiddinturayev">\@xumoyiddinturayev</string>
     <string name="termiz_davlat_universiteti">Termiz Davlat Universiteti</string>
     <string name="turayev_xumoyiddin_abdug_afforovich">Turayev Xumoyiddin Abdug\'afforovich</string>
+    <string name="turayev_xumoyiddin_abdug_afforovich_1991_yil_10_noyabr_kuni_surxondaryo_viloyati_denov_tmanida_tavllud_topgan">Turayev Xumoyiddin Abdug\'afforovich 1991-yil 10 - noyabr kuni Surxondaryo viloyati Denov tmanida tavllud topgan.</string>
 </resources>

@@ -64,7 +64,7 @@
                     android:layout_marginTop="3dp"
                     android:layout_marginEnd="16dp"
                     android:drawablePadding="10dp"
-                    android:text="Turayev Xumoyiddin Abdug'afforovich 1991-yil  10 - noyabr kuni Surxondaryo viloyati Denov tmanida tavllud topgan."
+                    android:text="@string/turayev_xumoyiddin_abdug_afforovich_1991_yil_10_noyabr_kuni_surxondaryo_viloyati_denov_tmanida_tavllud_topgan"
                     android:textSize="10sp"
                     tools:ignore="SmallSp"
                     android:layout_marginBottom="20dp"/>
